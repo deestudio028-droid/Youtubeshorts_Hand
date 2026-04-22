@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ReelHand",
+  "version": "1.0.0",
+  "description": "Control YouTube Shorts with webcam hand gestures.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "ReelHand",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReelHand</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="reelhand-popup-body">
+    <main class="reelhand-popup">
+      <section class="popup-hero">
+        <div class="popup-brand">
+          <span class="popup-mark"></span>
+          <div>
+            <h1>ReelHand</h1>
+            <p>Control Shorts with gestures.</p>
+          </div>
+        </div>
+        <div class="popup-status" aria-live="polite">
+          <span id="popup-status-dot" class="popup-dot"></span>
+          <span id="popup-status-text">Checking status</span>
+        </div>
+      </section>
+
+      <section class="popup-panel">
+        <h2>Gestures</h2>
+        <ul class="gesture-list">
+          <li><span>Thumb + Index</span><strong>Next Short</strong></li>
+          <li><span>Thumb + Middle</span><strong>Previous Short</strong></li>
+          <li><span>Thumb + Pinky</span><strong>Play / Pause</strong></li>
+        </ul>
+      </section>
+
+      <section class="popup-panel">
+        <h2>Start</h2>
+        <ol class="start-list">
+          <li>Run <code>python main.py</code>.</li>
+          <li>Open <code>youtube.com/shorts</code>.</li>
+          <li>Keep your hand visible in the webcam preview.</li>
+        </ol>
+      </section>
+
+      <footer class="popup-footer">
+        <span>Last gesture</span>
+        <strong id="popup-last-gesture">NONE</strong>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
